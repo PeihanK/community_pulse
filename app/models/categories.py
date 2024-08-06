@@ -10,4 +10,4 @@ class Category(db.Model):
     questions = db.relationship('Question', backref='category', lazy=True)
 
     def __repr__(self):
-        return f'Category {self.id}'
+        return f'Category {self.id}: {self.name}'
